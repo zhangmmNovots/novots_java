@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.weilaios.iqxceqhnhubt.da.mapper.UvsvTseMapper">
+
+            
+
+    <insert id="Activity_1rxifnj">
+        insert into uvsv_tse
+        <trim prefix="(" suffix=")" suffixOverrides=","> 
+            <if test="paramColumn3 != null">
+               entryTime,
+            </if>
+            <if test="paramColumn1 != null">
+               userName,
+            </if>
+            <if test="paramColumn2 != null">
+               telephone,
+            </if>
+            <if test="uvsv_tse_id0 != null">
+               uvsv_tse_id,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="paramColumn3 != null">
+                #{paramColumn3},
+            </if>
+            <if test="paramColumn1 != null">
+                #{paramColumn1},
+            </if>
+            <if test="paramColumn2 != null">
+                #{paramColumn2},
+            </if>
+            <if test="uvsv_tse_id0 != null">
+                #{uvsv_tse_id0},
+            </if>
+        </trim>
+    </insert>
+            
+
+    <select id="Activity_19afm91" resultType="java.util.HashMap">
+        select c.`uvsv_tse_id`,c.`uvsv_tse_id`as id FROM uvsv_tse c 
+		 where c.userName = #{paramColumn1}
+    </select>
+            
+
+    <delete id="Activity_0ljcgdd">
+        DELETE FROM uvsv_tse where uvsv_tse_id = #{paramColumn2}
+    </delete>
+            
+
+    <select id="Activity_0856co3" resultType="java.util.HashMap">
+        select s.`uvsv_tse_id`,s.`userName`,s.`uvsv_tse_id`as id FROM uvsv_tse s 
+		 where s.userName = #{paramColumn1}
+    </select>
+
+</mapper>

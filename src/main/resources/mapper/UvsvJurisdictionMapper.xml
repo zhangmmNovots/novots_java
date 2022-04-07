@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.weilaios.iqxceqhnhubt.da.mapper.UvsvJurisdictionMapper">
+
+            
+
+    <select id="Activity_14crfon" resultType="java.util.HashMap">
+        select s.`uvsv_jurisdiction_id`,s.`permission_name`,s.`uvsv_jurisdiction_id`as id FROM uvsv_jurisdiction s 
+		
+    </select>
+
+</mapper>

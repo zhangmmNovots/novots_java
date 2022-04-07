@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.weilaios.iqxceqhnhubt.da.mapper.UvsvSUserMapper">
+
+            
+
+    <select id="Activity_1w6xhnt" resultType="java.util.HashMap">
+        select l.`uvsv_s_user_id`,l.`uvsv_s_user_id`as id FROM uvsv_s_user l 
+		 where l.userName = #{paramColumn1} AND l.password = #{paramColumn2}
+    </select>
+            
+
+    <select id="Activity_13wix3e" resultType="java.util.HashMap">
+        select i.`uvsv_s_user_id`,i.`uvsv_s_user_id`as id FROM uvsv_s_user i 
+		 where i.userName = #{paramColumn1}
+    </select>
+            
+
+    <select id="Activity_1f93dbi" resultType="java.util.HashMap">
+        select c.`uvsv_s_user_id`,c.`userName`,c.`password`,c.`uvsv_s_user_id`as id,j.`uvsv_mzvr_id` as `j_uvsv_mzvr_id`,j.`uvsv_xfue` as `j_uvsv_xfue`,q.`uvsv_role_id` as `q_uvsv_role_id`,q.`role_name` as `q_role_name` FROM uvsv_s_user c 
+		 LEFT JOIN uvsv_mzvr j  ON c.uvsv_s_user_id = j.uvsv_bkfp
+		 INNER JOIN uvsv_mzvr d  ON c.uvsv_s_user_id = d.uvsv_bkfp INNER JOIN uvsv_role q  ON q.uvsv_role_id = d.uvsv_xfue
+		
+    </select>
+
+</mapper>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.weilaios.iqxceqhnhubt.da.mapper.UvsvApplicationRevenuMapper">
+
+            
+
+    <select id="Activity_0f3s7ye" resultType="java.util.HashMap">
+        select t.`uvsv_application_revenu_id`,t.`fee`,t.`month`,t.`uvsv_application_revenu_id`as id FROM uvsv_application_revenu t 
+		 where t.uvsv_application_revenu_id = #{paramColumn1}
+    </select>
+            
+
+    <delete id="Activity_0u8fygp">
+        DELETE FROM uvsv_application_revenu where uvsv_application_revenu_id = #{paramColumn2}
+    </delete>
+            
+
+    <select id="Activity_0f2xovj" resultType="java.util.HashMap">
+        select s.`fee`,s.`month`,s.`uvsv_dzsp`,s.`uvsv_psey`,s.`uvsv_application_revenu_id`as id,s.`uvsv_application_revenu_id`,u.`userName` as `u_userName`,u.`telephone` as `u_telephone`,u.`entryTime` as `u_entryTime`,u.`idNumber` as `u_idNumber`,u.`address` as `u_address`,n.`project_id` as `n_project_id`,n.`entry_name` as `n_entry_name` FROM uvsv_application_revenu s 
+		 LEFT JOIN uvsv_tse u  ON s.uvsv_dzsp = u.uvsv_tse_id
+		 LEFT JOIN uvsv_project n  ON s.uvsv_psey = n.uvsv_project_id
+		
+    </select>
+
+</mapper>

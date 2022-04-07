@@ -1,0 +1,63 @@
+server:
+  port: 8080
+  tomcat:
+    max-http-form-post-size: -1
+
+spring:
+  profiles:
+  application:
+    name: novots
+  datasource:
+    url: jdbc:mysql://10.68.33.247:8066/ci_testdb?zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&serverTimezone=GMT%2B8&useSSL=false&nullCatalogMeansCurrent=true
+    username: root
+    password: 123456
+  servlet:
+    multipart:
+       max-file-size: 2048MB
+       max-request-size: 2048MB
+
+
+  redis:
+    database: 10
+    host: kredis
+    port: 6379
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        max-idle: 8
+        min-idle: 0
+
+  codec:
+    max-in-memory-size: 2048MB
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+mybatis:
+  mapper-locations: classpath:mapper/**Mapper.xml
+log:
+  name: iqxceqhnhubt
+  path: /node/logs
+logging:
+  level:
+    com.weilaios.iqxceqhnhubt.da.mapper: debug
+    org:
+      springframework:
+        security: debug
+  config: classpath:config/logback-spring.xml
+
+flowable:
+  database-schema-update: true
+
+backEndApiUrl: http://iqxceqhnhubt.weilaios.com 
+
+
+
+qn:
+  accessKey: ruZbFRRSN-lIeHmIsLx3XCOxnRQ4K7kiI94MbKE8 
+  secretKey: JFrzqrwRs6k83XAPKQ6xzWQAz_iUpmw9UeRcLtMm 
+  bucket: weilaios 
+  domain: https://images.weilaios.com/ 
+
+
+
